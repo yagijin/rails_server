@@ -18,5 +18,7 @@ jobs:
         run: cat .github/workflows/known_hosts >> ~/.ssh/known_hosts
       - name: git remote add
         run: git remote add lolipop ${{ secrets.LOLIPOP_REPOSITORY_URL}}
+      - name: git rename
+        run: git branch -m main master
       - name: deploy
-        run: git push lolipop HEAD:main -f
+        run: git push -f lolipop master
