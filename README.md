@@ -18,6 +18,8 @@ Things you may want to cover:
 
 - How to run the test suite
 
+  - minitest を使用
+
 - Services (job queues, cache servers, search engines, etc.)
 
 - Deployment instructions
