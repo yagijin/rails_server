@@ -22,4 +22,7 @@ Things you may want to cover:
 
 - Deployment instructions
 
+  - lolipop のマネクラを使用
+    - https://mc.lolipop.jp
+
 - ...
