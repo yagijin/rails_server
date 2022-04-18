@@ -19,4 +19,4 @@ jobs:
       - name: git remote add
         run: git remote add lolipop ${{ secrets.LOLIPOP_REPOSITORY_URL}}
       - name: deploy
-        run: git push -f lolipop HEAD:main
+        run: git push lolipop HEAD:main -f
