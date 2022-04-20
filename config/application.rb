@@ -2,6 +2,10 @@ require_relative "boot"
 
 require "rails/all"
 
+# APIモードでgraphiqlを使う場合このrequireが必要
+# https://github.com/rmosolgo/graphiql-rails#note-on-api-mode
+require "sprockets/railtie"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -10,6 +14,9 @@ module ServerRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
 
     # Configuration for the application, engines, and railties goes here.
     #

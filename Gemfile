@@ -47,6 +47,7 @@ end
 
 group :development do
   gem 'graphiql-rails'
+  gem 'sass-rails'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
