@@ -8,8 +8,6 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
 gem 'graphql'
 
-gem 'graphiql-rails'
-
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
@@ -48,6 +46,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'graphiql-rails'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
