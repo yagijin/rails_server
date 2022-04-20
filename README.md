@@ -1,9 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails api mode の sandbox
 
-Things you may want to cover:
+## エンドポイント
+
+/hello
+
+```json
+{ "data": "hello" }
+```
+
+## info
 
 - Ruby version
   2.7.5 以上
