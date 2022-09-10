@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # graphqlのエンドポイント
   post '/graphql', to: 'graphql#execute'
