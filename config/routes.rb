@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-
   # graphqlのエンドポイント
-  post "/graphql", to: "graphql#execute"
+  post '/graphql', to: 'graphql#execute'
 
   # grapiql for development
   if Rails.env.development? || Rails.env.production?

@@ -1,9 +1,9 @@
-require "test_helper"
+require 'test_helper'
 
 class HelloControllerTest < ActionController::TestCase
-  test "#index return HelloWorld" do
+  test '#index return HelloWorld' do
     get :index
     assert_response :success
-    assert_equal "HelloWold", JSON.parse(response.body)["data"]
+    assert_equal 'HelloWold', JSON.parse(response.body)['data']
   end
 end

@@ -8,9 +8,9 @@ module Types
     # They will be entry points for queries on your schema.
 
     field :hello, String, null: false,
-      description: "An example field return HelloWorld"
+                          description: 'An example field return HelloWorld'
     def hello
-      "Hello World"
+      'Hello World'
     end
   end
 end
