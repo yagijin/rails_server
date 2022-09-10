@@ -2,6 +2,7 @@ require:
   - rubocop-rails
 
 AllCops:
+  NewCops: enable
   Exclude:
     - "Gemfile"
     - "Rakefile"
@@ -11,3 +12,7 @@ AllCops:
     - "vendor/**/*"
     - "spec/fixtures/**/*"
     - "tmp/**/*"
+
+MethodLength:
+  CountComments: true
+  Max: 20

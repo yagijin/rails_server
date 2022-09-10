@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Types
+  # QueryType
   class QueryType < Types::BaseObject
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     include GraphQL::Types::Relay::HasNodeField
