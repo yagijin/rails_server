@@ -1,0 +1,13 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - "Gemfile"
+    - "Rakefile"
+    - "bin/**/*"
+    - "storage/**/*"
+    - "public/**/*"
+    - "vendor/**/*"
+    - "spec/fixtures/**/*"
+    - "tmp/**/*"
