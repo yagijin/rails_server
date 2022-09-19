@@ -12,7 +12,8 @@ class WeddingQuizzesController < ApplicationController
     return if params[:choice_id].nil?
 
     ## TODO: ここに数値判定を入れる
-    WeddingQuizSubmission.create!(wedding_quiz_id: params[:choice_id])
+    WeddingQuizSubmission.create!(wedding_quiz_choice_id: params[:choice_id])
+    render json: true
   end
 
   # クイズの集計結果を返す
