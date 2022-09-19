@@ -10,6 +10,13 @@ rails api mode の sandbox
 { "data": "hello" }
 ```
 
+## wedding
+
+データ初期化
+```shell
+rake wedding_init:generate RAILS_ENV=development
+```
+
 ## info
 
 - Ruby version
