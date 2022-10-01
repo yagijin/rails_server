@@ -4,7 +4,10 @@
 class WeddingQuizzesController < ApplicationController
   # クイズの選択肢の情報を返す
   def index
-    render json: WeddingQuiz.find(params[:id]).wedding_quiz_choices.index_by(&:id).values.to_json
+    render json: { 
+      quiz: WeddingQuiz.find(params[:id]).text,
+      choices: WeddingQuiz.find(params[:id]).wedding_quiz_choices.index_by(&:id).values
+    }.to_json
   end
 
   # クイズの投票をする
