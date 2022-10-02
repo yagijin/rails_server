@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,29 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_919_082_102) do
-  create_table 'wedding_quiz_choices', force: :cascade do |t|
-    t.integer 'wedding_quiz_id'
-    t.string 'text', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['wedding_quiz_id'], name: 'index_wedding_quiz_choices_on_wedding_quiz_id'
+ActiveRecord::Schema[7.0].define(version: 2022_09_19_082102) do
+  create_table "wedding_quiz_choices", force: :cascade do |t|
+    t.integer "wedding_quiz_id"
+    t.string "text", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["wedding_quiz_id"], name: "index_wedding_quiz_choices_on_wedding_quiz_id"
   end
 
-  create_table 'wedding_quiz_submissions', force: :cascade do |t|
-    t.integer 'wedding_quiz_choice_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['wedding_quiz_choice_id'], name: 'index_wedding_quiz_submissions_on_wedding_quiz_choice_id'
+  create_table "wedding_quiz_submissions", force: :cascade do |t|
+    t.integer "wedding_quiz_choice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["wedding_quiz_choice_id"], name: "index_wedding_quiz_submissions_on_wedding_quiz_choice_id"
   end
 
-  create_table 'wedding_quizzes', force: :cascade do |t|
-    t.string 'text', null: false
-    t.boolean 'opened', default: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "wedding_quizzes", force: :cascade do |t|
+    t.string "text", null: false
+    t.boolean "closed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_foreign_key 'wedding_quiz_choices', 'wedding_quizzes'
-  add_foreign_key 'wedding_quiz_submissions', 'wedding_quiz_choices'
+  add_foreign_key "wedding_quiz_choices", "wedding_quizzes"
+  add_foreign_key "wedding_quiz_submissions", "wedding_quiz_choices"
 end

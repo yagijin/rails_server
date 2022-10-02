@@ -5,7 +5,7 @@ class CreateWeddingQuizzes < ActiveRecord::Migration[7.0]
   def change
     create_table :wedding_quizzes do |t|
       t.string :text, null: false
-      t.boolean :opened, default: false
+      t.boolean :closed, default: false
       t.timestamps
     end
   end

@@ -14,7 +14,12 @@ rails api mode の sandbox
 
 データ初期化
 ```shell
-rake wedding_init:generate RAILS_ENV=development
+bundle exec rake wedding_init:generate RAILS_ENV=development
+```
+
+データ削除
+```shell
+bundle exec rake wedding_delete:delete RAILS_ENV=development
 ```
 
 ## info
