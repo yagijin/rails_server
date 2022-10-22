@@ -22,6 +22,11 @@ bundle exec rake wedding_init:generate RAILS_ENV=development
 bundle exec rake wedding_delete:delete RAILS_ENV=development
 ```
 
+実データ投入
+```shell
+bundle exec rake wedding_real_init:generate RAILS_ENV=development
+```
+
 ## info
 
 - Ruby version
