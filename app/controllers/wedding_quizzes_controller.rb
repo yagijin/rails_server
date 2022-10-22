@@ -28,11 +28,17 @@ class WeddingQuizzesController < ApplicationController
 
     result = []
     choices.each do |choice|
-      hash = { id: choice.id, count: choice.sum }
+      hash = {
+        id: choice.id,
+        text: choice.text,
+        count: choice.sum
+      }
       result.push hash
     end
     render json: {
       isClosed: quiz.closed,
+      quizId: quiz.id,
+      quizText: quiz.text,
       result: result
     }.to_json
   end
