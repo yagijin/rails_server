@@ -14,7 +14,7 @@ class WeddingQuizzesController < ApplicationController
   def add
     return if params[:choice_id].nil?
 
-    unless WeddingQuiz.find(params[:choice_id]).closed
+    unless WeddingQuiz.find(params[:id]).closed
       ## TODO: ここに数値判定を入れる
       WeddingQuizSubmission.create!(wedding_quiz_choice_id: params[:choice_id])
     end
